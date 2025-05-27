@@ -3,6 +3,77 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>画像クイズゲーム（全10問・4択）</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #e6f0ff;
+            /* 薄い青系で見やすく */
+            padding: 2rem;
+        }
+
+        .quiz {
+            background: #fef9e7;
+            /* クイズエリアの背景色を薄い黄色系に変更 */
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .question h2 {
+            width: 100%;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .question img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .choices {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .answer {
+            margin-bottom: 0.5rem;
+        }
+
+        .answer input[type="radio"] {
+            accent-color: #007bff;
+            margin-right: 0.5em;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        p strong {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>画像クイズゲーム（全10問・4択）</title>
     <script defer>
