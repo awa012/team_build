@@ -3,13 +3,213 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample</title>
-    <script src="sample.js" defer></script>
+    <title>画像クイズゲーム（全10問・4択）</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #e6f0ff;
+            /* 薄い青系で見やすく */
+            padding: 2rem;
+        }
+
+        .quiz {
+            background: #fef9e7;
+            /* クイズエリアの背景色を薄い黄色系に変更 */
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .question h2 {
+            width: 100%;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .question img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .choices {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .answer {
+            margin-bottom: 0.5rem;
+        }
+
+        .answer input[type="radio"] {
+            accent-color: #007bff;
+            margin-right: 0.5em;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        p strong {
+            font-size: 1.1rem;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="output"></div>
+    <div class="quiz">
+        <h1>画像クイズゲーム（全10問・4択）</h1>
+        <p>各問題について、正しいと思う選択肢を1つ選んでください。</p>
+
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+        <div class="question">
+            <h2>第1問：この動物は何？</h2>
+            <img src="img1.jpg" alt="第1問画像">
+            <div class="choices">
+                <label class="answer"><input type="radio" name="q1">ネコ</label>
+                <label class="answer"><input type="radio" name="q1">ウサギ</label>
+                <label class="answer"><input type="radio" name="q1">キツネ</label>
+                <label class="answer"><input type="radio" name="q1">イヌ</label>
+            </div>
+        </div>
+
+        
+        <hr>
+        <h2>答え合わせ</h2>
+        <ol>
+            <li>第1問：イヌ</li>
+            <li>第2問：リンゴ</li>
+            <li>第3問：スカイツリー</li>
+            <li>第4問：日本</li>
+            <li>第5問：ドラえもん</li>
+            <li>第6問：桜</li>
+            <li>第7問：新幹線</li>
+            <li>第8問：チョコレート</li>
+            <li>第9問：サッカー</li>
+            <li>第10問：パンダ</li>
+        </ol>
+
+        <p><strong>あなたの得点：〇／10点</strong></p>
+        <p>※紙やメモで記録してもOKです。</p>
+    </div>
 </body>
 
 </html>
