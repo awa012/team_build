@@ -3,10 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>画像クイズゲーム（全10問・4択）</title>
+    <script defer>
+        function checkAnswers() {
+            // 各問題の正解
+            const correctAnswers = {
+                q1: 'イヌ',
+                q2: 'リンゴ',
+                q3: 'スカイツリー',
+                q4: '日本',
+                q5: 'ドラえもん',
+                q6: '桜',
+                q7: '新幹線',
+                q8: 'チョコレート',
+                q9: 'サッカー',
+                q10: 'パンダ'
+            };
+
+            let score = 0;
+
+            // 各問題に対してチェック
+            for (let i = 1; i <= 10; i++) {
+                const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedAnswer && selectedAnswer.value === correctAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            // 結果を表示
+            document.getElementById("score").innerHTML = `あなたの得点：${score}／10点`;
+        }
+    </script>
 </head>
 
 <body>
+    <div id="output"></div>
+
 
     <h1>画像クイズゲーム（全10問・4択）</h1>
     <p>各問題について、正しいと思う選択肢を1つ選んでください。</p>
@@ -14,78 +47,97 @@
     <!-- ======= 第1問 ======= -->
     <h2>第1問：この動物は何？</h2>
     <img src="img1.jpg" alt="第1問画像" width="300"><br>
-    <input type="radio" name="q1"> ネコ<br>
-    <input type="radio" name="q1"> ウサギ<br>
-    <input type="radio" name="q1"> キツネ<br>
-    <input type="radio" name="q1"> イヌ<br><br>
+    <input type="radio" name="q1" value="ネコ"> ネコ<br>
+    <input type="radio" name="q1" value="ウサギ"> ウサギ<br>
+    <input type="radio" name="q1" value="キツネ"> キツネ<br>
+    <input type="radio" name="q1" value="イヌ"> イヌ<br><br>
+
 
     <!-- ======= 第2問 ======= -->
     <h2>第2問：この果物は何？</h2>
     <img src="img2.jpg" alt="第2問画像" width="300"><br>
-    <input type="radio" name="q2"> スイカ<br>
-    <input type="radio" name="q2"> リンゴ<br>
-    <input type="radio" name="q2"> バナナ<br>
-    <input type="radio" name="q2"> メロン<br><br>
+    <input type="radio" name="q2" value="スイカ"> スイカ<br>
+    <input type="radio" name="q2" value="リンゴ"> リンゴ<br>
+    <input type="radio" name="q2" value="バナナ"> バナナ<br>
+    <input type="radio" name="q2" value="メロン"> メロン<br><br>
 
     <!-- ======= 第3問 ======= -->
     <h2>第3問：この建物はどこ？</h2>
     <img src="img3.jpg" alt="第3問画像" width="300"><br>
-    <input type="radio" name="q3"> 通天閣<br>
-    <input type="radio" name="q3"> 東京タワー<br>
-    <input type="radio" name="q3"> スカイツリー<br>
-    <input type="radio" name="q3"> 京都タワー<br><br>
+    <input type="radio" name="q3" value="通天閣"> 通天閣<br>
+    <input type="radio" name="q3" value="東京タワー"> 東京タワー<br>
+    <input type="radio" name="q3" value="スカイツリー"> スカイツリー<br>
+    <input type="radio" name="q3" value="京都タワー"> 京都タワー<br><br>
+
 
     <!-- ======= 第4問 ======= -->
     <h2>第4問：この国旗はどこ？</h2>
     <img src="img4.jpg" alt="第4問画像" width="300"><br>
-    <input type="radio" name="q4"> 日本<br>
-    <input type="radio" name="q4"> イギリス<br>
-    <input type="radio" name="q4"> アメリカ<br>
-    <input type="radio" name="q4"> 中国<br><br>
+    <input type="radio" name="q4" value="日本"> 日本<br>
+    <input type="radio" name="q4" value="イギリス"> イギリス<br>
+    <input type="radio" name="q4" value="アメリカ"> アメリカ<br>
+    <input type="radio" name="q4" value="中国"> 中国<br><br>
 
     <!-- ======= 第5問 ======= -->
     <h2>第5問：このキャラクターは誰？</h2>
     <img src="img5.jpg" alt="第5問画像" width="300"><br>
-    <input type="radio" name="q5"> ピカチュウ<br>
-    <input type="radio" name="q5"> ドラえもん<br>
-    <input type="radio" name="q5"> アンパンマン<br>
-    <input type="radio" name="q5"> しんちゃん<br><br>
+
+    <input type="radio" name="q5" value="ピカチュウ"> ピカチュウ<br>
+    <input type="radio" name="q5" value="ドラえもん"> ドラえもん<br>
+    <input type="radio" name="q5" value="アンパンマン"> アンパンマン<br>
+    <input type="radio" name="q5" value="しんちゃん"> しんちゃん<br><br>
 
     <!-- ======= 第6問 ======= -->
     <h2>第6問：この花は何？</h2>
     <img src="img6.jpg" alt="第6問画像" width="300"><br>
-    <input type="radio" name="q6"> 桜<br>
-    <input type="radio" name="q6"> バラ<br>
-    <input type="radio" name="q6"> チューリップ<br>
-    <input type="radio" name="q6"> ひまわり<br><br>
+
+    <input type="radio" name="q6" value="桜"> 桜<br>
+    <input type="radio" name="q6" value="バラ"> バラ<br>
+    <input type="radio" name="q6" value="チューリップ"> チューリップ<br>
+    <input type="radio" name="q6" value="ひまわり"> ひまわり<br><br>
+
 
     <!-- ======= 第7問 ======= -->
     <h2>第7問：この乗り物は？</h2>
     <img src="img7.jpg" alt="第7問画像" width="300"><br>
-    <input type="radio" name="q7"> 新幹線<br>
-    <input type="radio" name="q7"> 飛行機<br>
-    <input type="radio" name="q7"> 自動車<br>
-    <input type="radio" name="q7"> バス<br><br>
+
+    <input type="radio" name="q7" value="新幹線"> 新幹線<br>
+    <input type="radio" name="q7" value="飛行機"> 飛行機<br>
+    <input type="radio" name="q7" value="自動車"> 自動車<br>
+    <input type="radio" name="q7" value="バス"> バス<br><br>
 
     <!-- ======= 第8問 ======= -->
     <h2>第8問：このお菓子は？</h2>
     <img src="img8.jpg" alt="第8問画像" width="300"><br>
-    <input type="radio" name="q8"> ポテトチップス<br>
-    <input type="radio" name="q8"> ガム<br>
-    <input type="radio" name="q8"> キャンディー<br>
-    <input type="radio" name="q8"> チョコレート<br><br>
+
+    <input type="radio" name="q8" value="ポテトチップス"> ポテトチップス<br>
+    <input type="radio" name="q8" value="ガム"> ガム<br>
+    <input type="radio" name="q8" value="キャンディー"> キャンディー<br>
+    <input type="radio" name="q8" value="チョコレート"> チョコレート<br><br>
+
 
     <!-- ======= 第9問 ======= -->
     <h2>第9問：このスポーツは？</h2>
     <img src="img9.jpg" alt="第9問画像" width="300"><br>
-    <input type="radio" name="q9"> サッカー<br>
-    <input type="radio" name="q9"> 野球<br>
-    <input type="radio" name="q9"> バスケ<br>
-    <input type="radio" name="q9"> テニス<br><br>
+    <input type="radio" name="q9" value="サッカー"> サッカー<br>
+    <input type="radio" name="q9" value="野球"> 野球<br>
+    <input type="radio" name="q9" value="バスケ"> バスケ<br>
+    <input type="radio" name="q9" value="テニス"> テニス<br><br>
 
     <!-- ======= 第10問 ======= -->
     <h2>第10問：この動物は何？</h2>
     <img src="img10.jpg" alt="第10問画像" width="300"><br>
+
+    <input type="radio" name="q10" value="コアラ"> コアラ<br>
+    <input type="radio" name="q10" value="カンガルー"> カンガルー<br>
+    <input type="radio" name="q10" value="パンダ"> パンダ<br>
+    <input type="radio" name="q10" value="ゴリラ"> ゴリラ<br><br>
+
+    <!-- 解答ボタン -->
+    <button onclick="checkAnswers()">答え合わせ</button>
+
+    <h2>答え合わせ</h2>
+    <p id="score"></p>
     <input type="radio" name="q10"> コアラ<br>
     <input type="radio" name="q10"> カンガルー<br>
     <input type="radio" name="q10"> パンダ<br>
