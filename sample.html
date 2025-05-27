@@ -40,6 +40,7 @@
 <body>
     <div id="output"></div>
 
+
     <h1>画像クイズゲーム（全10問・4択）</h1>
     <p>各問題について、正しいと思う選択肢を1つ選んでください。</p>
 
@@ -50,6 +51,7 @@
     <input type="radio" name="q1" value="ウサギ"> ウサギ<br>
     <input type="radio" name="q1" value="キツネ"> キツネ<br>
     <input type="radio" name="q1" value="イヌ"> イヌ<br><br>
+
 
     <!-- ======= 第2問 ======= -->
     <h2>第2問：この果物は何？</h2>
@@ -67,6 +69,7 @@
     <input type="radio" name="q3" value="スカイツリー"> スカイツリー<br>
     <input type="radio" name="q3" value="京都タワー"> 京都タワー<br><br>
 
+
     <!-- ======= 第4問 ======= -->
     <h2>第4問：この国旗はどこ？</h2>
     <img src="img4.jpg" alt="第4問画像" width="300"><br>
@@ -78,6 +81,7 @@
     <!-- ======= 第5問 ======= -->
     <h2>第5問：このキャラクターは誰？</h2>
     <img src="img5.jpg" alt="第5問画像" width="300"><br>
+
     <input type="radio" name="q5" value="ピカチュウ"> ピカチュウ<br>
     <input type="radio" name="q5" value="ドラえもん"> ドラえもん<br>
     <input type="radio" name="q5" value="アンパンマン"> アンパンマン<br>
@@ -86,14 +90,17 @@
     <!-- ======= 第6問 ======= -->
     <h2>第6問：この花は何？</h2>
     <img src="img6.jpg" alt="第6問画像" width="300"><br>
+
     <input type="radio" name="q6" value="桜"> 桜<br>
     <input type="radio" name="q6" value="バラ"> バラ<br>
     <input type="radio" name="q6" value="チューリップ"> チューリップ<br>
     <input type="radio" name="q6" value="ひまわり"> ひまわり<br><br>
 
+
     <!-- ======= 第7問 ======= -->
     <h2>第7問：この乗り物は？</h2>
     <img src="img7.jpg" alt="第7問画像" width="300"><br>
+
     <input type="radio" name="q7" value="新幹線"> 新幹線<br>
     <input type="radio" name="q7" value="飛行機"> 飛行機<br>
     <input type="radio" name="q7" value="自動車"> 自動車<br>
@@ -102,10 +109,12 @@
     <!-- ======= 第8問 ======= -->
     <h2>第8問：このお菓子は？</h2>
     <img src="img8.jpg" alt="第8問画像" width="300"><br>
+
     <input type="radio" name="q8" value="ポテトチップス"> ポテトチップス<br>
     <input type="radio" name="q8" value="ガム"> ガム<br>
     <input type="radio" name="q8" value="キャンディー"> キャンディー<br>
     <input type="radio" name="q8" value="チョコレート"> チョコレート<br><br>
+
 
     <!-- ======= 第9問 ======= -->
     <h2>第9問：このスポーツは？</h2>
@@ -118,6 +127,7 @@
     <!-- ======= 第10問 ======= -->
     <h2>第10問：この動物は何？</h2>
     <img src="img10.jpg" alt="第10問画像" width="300"><br>
+
     <input type="radio" name="q10" value="コアラ"> コアラ<br>
     <input type="radio" name="q10" value="カンガルー"> カンガルー<br>
     <input type="radio" name="q10" value="パンダ"> パンダ<br>
@@ -128,6 +138,30 @@
 
     <h2>答え合わせ</h2>
     <p id="score"></p>
+    <input type="radio" name="q10"> コアラ<br>
+    <input type="radio" name="q10"> カンガルー<br>
+    <input type="radio" name="q10"> パンダ<br>
+    <input type="radio" name="q10"> ゴリラ<br><br>
+
+    <!-- ======= 解答一覧 ======= -->
+    <hr>
+    <h2>答え合わせ</h2>
+    <p>下記の正解を見ながら、自分の回答と照らし合わせて点数を計算しよう！</p>
+    <ol>
+        <li>第1問：イヌ</li>
+        <li>第2問：リンゴ</li>
+        <li>第3問：スカイツリー</li>
+        <li>第4問：日本</li>
+        <li>第5問：ドラえもん</li>
+        <li>第6問：桜</li>
+        <li>第7問：新幹線</li>
+        <li>第8問：チョコレート</li>
+        <li>第9問：サッカー</li>
+        <li>第10問：パンダ</li>
+    </ol>
+
+    <p><strong>あなたの得点：〇／10点</strong></p>
+    <p>※紙やメモで記録してもOKです。</p>
 
 </body>
 
